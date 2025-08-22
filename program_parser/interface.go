@@ -8,6 +8,7 @@ import (
 type Instruction interface {
 	TypeID() binary.TypeID
 	SetAccounts(accounts solana.PublicKeySlice) (err error)
+	PublicKeys() solana.PublicKeySlice
 	NewInstance() Instruction
 }
 
